@@ -26,17 +26,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS_DIR = ROOT / "tools"
-README = ROOT / "README.md"
+README = ROOT / "README.en.md"
 
 TABLE_HEADER = "| Tool | What it does |"
 TOOL_PATH = re.compile(r"tools/([\w.-]+\.(?:py|sh|ps1))")
 
-README_STATS = "readme_stats.py"        # the three that draw docs/card.jpg
-README_FEATURED = "readme_featured.py"
-README_CARD = "readme_card.py"
 SCENES_WALLPAPERS = "scenes_wallpapers.py"   # themes/scenes/wallpapers, linked from themes/README.md
 GEN_TABLES = "gen_tables.py"            # the TV tables, from examples/*/tv.json
-NOT_IN_TABLE = {README_STATS, README_FEATURED, README_CARD, SCENES_WALLPAPERS, GEN_TABLES}
+NOT_IN_TABLE = {SCENES_WALLPAPERS, GEN_TABLES}
 
 
 def table_rows(text):
@@ -138,7 +135,7 @@ class CheckerTest(unittest.TestCase):
         self.assertEqual(unlisted({"theme.ps1"}, listed(self.rows)), ["theme.ps1"])
 
     def test_a_card_renderer_or_the_wallpaper_script_is_not_reported(self):
-        self.assertEqual(unlisted({README_CARD, SCENES_WALLPAPERS}, listed(self.rows)), [])
+        self.assertEqual(unlisted({SCENES_WALLPAPERS}, listed(self.rows)), [])
 
     def test_a_table_that_is_not_there_reads_as_empty(self):
         self.assertEqual(table_rows("## Tools\n\nNone yet.\n"), [])

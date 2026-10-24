@@ -80,6 +80,7 @@
         android:banner="@drawable/banner"
         android:theme="@style/Theme.TvHome"
         android:allowBackup="false"
+        android:supportsRtl="true"
         android:localeConfig="@xml/locales_config">
 
         <activity

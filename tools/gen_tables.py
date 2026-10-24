@@ -186,11 +186,11 @@ def stats(text, entries, root):
     return text
 
 
-OWNED = ("README.en.md", "examples/README.md", "tools/readme_stats.py")
+OWNED = ("README.en.md", "examples/README.md")
 
 
 def render(root, texts=None):
-    """{relative path: the text it should have}, for the three files this script owns parts of.
+    """{relative path: the text it should have}, for the two files this script owns parts of.
 
     texts, if given, stands in for what those files hold now (by the same paths)."""
     entries = load(root)
@@ -199,8 +199,7 @@ def render(root, texts=None):
     readme = between(readme, "tv-table", readme_rows(entries), "README.en.md")
     readme = counts(readme, entries, root)
     examples = between(now["examples/README.md"], "tv-table", examples_rows(entries), "examples/README.md")
-    stats_py = stats(now["tools/readme_stats.py"], entries, root)
-    return {"README.en.md": readme, "examples/README.md": examples, "tools/readme_stats.py": stats_py}
+    return {"README.en.md": readme, "examples/README.md": examples}
 
 
 def stale(root):
@@ -304,14 +303,6 @@ def main(argv=None):
     except Problem as e:
         print(e, file=sys.stderr)
         return 2
-    if "tools/readme_stats.py" in changed:
-        if a.font:
-            for script, out in (("tools/readme_stats.py", "docs/stats.png"), ("tools/readme_card.py", "docs/card.jpg")):
-                subprocess.run([sys.executable, script, a.font, out], cwd=root, check=True)
-            changed += ["docs/stats.png", "docs/card.jpg"]
-        else:
-            print("A count changed: redraw docs/stats.png and docs/card.jpg (--font Fredoka.ttf, or "
-                  "tools/readme_stats.py and tools/readme_card.py).")
     print("Updated: " + ", ".join(changed) if changed else "Up to date.")
     return 0
 

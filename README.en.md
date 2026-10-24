@@ -1,39 +1,22 @@
 <p align="center">
-  <a href="https://github.com/bio-colab/MyTv"><img src="https://raw.githubusercontent.com/bio-colab/MyTv/main/docs/banner.png" alt="CleanYourTV. Your TV, minus the ads. Strip the bloatware from any Android TV or Google TV over Wi-Fi and replace the ad-filled home screen with a clean launcher that looks like an Apple TV. No root, no cable, nothing uninstalled, and a one-line restore." width="800"></a>
+  <a href="https://github.com/bio-colab/MyTv"><img src="docs/banner.png" alt="MyTv - Your TV, minus the ads" width="800"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/bio-colab/MyTv/stargazers"><img src="https://img.shields.io/github/stars/bio-colab/MyTv?style=flat&cacheSeconds=1800&color=cfffcf&labelColor=15181e" alt="Stars"></a>
-  <a href="https://github.com/bio-colab/MyTv/pulls?q=is%3Amerged"><img src="https://img.shields.io/github/issues-search?query=repo%3Abio-colab%2FMyTv%20is%3Apr%20is%3Amerged&style=flat&cacheSeconds=1800&label=merged%20PRs&color=cfffcf&labelColor=15181e" alt="Merged PRs"></a>
-  <a href="https://github.com/bio-colab/MyTv/network/members"><img src="https://img.shields.io/github/forks/bio-colab/MyTv?style=flat&cacheSeconds=1800&color=cfffcf&labelColor=15181e" alt="Forks"></a>
-  <a href="https://github.com/bio-colab/MyTv/graphs/contributors"><img src="https://img.shields.io/github/contributors/bio-colab/MyTv?style=flat&cacheSeconds=1800&color=cfffcf&labelColor=15181e" alt="Contributors"></a>
-  <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/README-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-cfffcf?style=flat&labelColor=15181e" alt="简体中文"></a>
-  <a href="README.vi.md"><img src="https://img.shields.io/badge/README-Ti%E1%BA%BFng%20Vi%E1%BB%87t-cfffcf?style=flat&labelColor=15181e" alt="Tiếng Việt"></a>
-  <a href="README.ja.md"><img src="https://img.shields.io/badge/README-%E6%97%A5%E6%9C%AC%E8%AA%9E-cfffcf?style=flat&labelColor=15181e" alt="日本語"></a>
-  <a href="https://buymeacoffee.com/gathint"><img src="https://img.shields.io/badge/support-%E2%9D%A4-ff5e8a?style=flat&labelColor=15181e" alt="Support, buy me a coffee"></a>
-  <a href="https://www.producthunt.com/products/cleanyourtv"><img src="https://img.shields.io/badge/Product%20Hunt-upvote%20%E2%96%B2-da552f?style=flat&logo=producthunt&logoColor=white&labelColor=15181e" alt="CleanYourTV on Product Hunt"></a>
+  <a href="https://github.com/bio-colab/MyTv"><img src="https://img.shields.io/badge/GitHub-bio--colab%2FMyTv-15181e?style=flat&logo=github" alt="MyTv GitHub"></a>
+  <a href="https://github.com/bio-colab/MyTv/stargazers"><img src="https://img.shields.io/github/stars/bio-colab/MyTv?style=flat&color=10b981&labelColor=15181e" alt="Stars"></a>
+  <a href="https://github.com/bio-colab/MyTv/network/members"><img src="https://img.shields.io/github/forks/bio-colab/MyTv?style=flat&color=10b981&labelColor=15181e" alt="Forks"></a>
+  <a href="README.md"><img src="https://img.shields.io/badge/Language-العربية-10b981?style=flat&labelColor=15181e" alt="العربية"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-gray?style=flat&labelColor=15181e" alt="MIT License"></a>
 </p>
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/310225"><img src="docs/trending-badge.png" alt="#1 trending repo of the week, via trendshift.io" width="360"></a>
-</p>
+---
 
-<p align="center">
-  <a href="docs/PRESS.md"><img src="docs/card.jpg" alt="260 TV models · 77 brands · 25 languages · 497 KB launcher. Featured in TechCrunch, TechRadar, Tom's Guide, Mashable, Android Authority, XDA, FlatpanelsHD, It's FOSS, Phandroid, GIGAZINE, Xataka, WinFuture, Frandroid, Macitynet, Techaeris, TechPP and 171 more: 187 articles from 31 countries. Before: stock Google TV home with a sponsored ad. After: the Clean Your TV launcher." width="800"></a>
-</p>
+# MyTv (تلفازي) 📺
 
-**The viral tweet:** [x.com/gathint/status/2111379569030939102](https://x.com/gathint/status/2111379569030939102)
+Strip the bloatware and ads from any Android TV or Google TV over Wi-Fi, and replace the ad-filled home screen with a clean, ultra-lightweight launcher (<500 KB) that looks like an Apple TV. No root, no cable, nothing uninstalled, and a one-line restore.
 
-On 17 October 2026 I posted a before and after of my parents' TV, cleaned up by Claude Code over Wi-Fi.
-It reached 7.4M views, people started doing the same to their own TVs, and their replies turned into
-the lists here: 170+ TV models from 200+ contributors in four days. The repo was called tv-vibehack
-until the 19th; old links work.
-
-**Themes, switches and add-ons:** [https://github.com/bio-colab/MyTv/addons](https://github.com/bio-colab/MyTv/addons)
-
-**Official links:** the website is [https://github.com/bio-colab/MyTv](https://github.com/bio-colab/MyTv) and the code, launcher and
-tools live only in this repo. Other domains using the name, such as cleanyourtv.com, are not run by
-this project ([#1004](https://github.com/bio-colab/MyTv/issues/1004)).
+Optimized for the Arab world and budget, low-spec smart TVs, and fully powered by **Google Antigravity** agents.
 
 ## How it works
 
@@ -420,6 +403,7 @@ tools/theme.sh themes/aurora                                 # push a theme; --r
 | Tool | What it does |
 |---|---|
 | [`tools/tv.py`](tools/tv.py) | Pure-Python ADB client: shell, batch, push, pull, reboot, and screenshots, optionally pressing remote keys first. Works where the stock `adb` binary is blocked. |
+| [`tools/assess_device.py`](tools/assess_device.py) | Assesses hardware specs (RAM, storage, CPU, Android SDK), identifies hardware tier (Tier 1 Ultra-Budget, Tier 2, Tier 3) and protects regional apps. |
 | [`tools/b64push.py`](tools/b64push.py) | Uploads large files such as APKs in base64 chunks and verifies the checksum. |
 | [`tools/relay.py`](tools/relay.py) | Forwards a local port to the TV's ADB port, for assistants whose sandbox can't reach your network. Listens on this computer only. [Guide](tools/relay.md). |
 | [`tools/disable.sh`](tools/disable.sh), [`restore.sh`](tools/restore.sh) | Apply or undo a debloat list, the undo from the state recorded before the change. |
@@ -433,7 +417,6 @@ tools/theme.sh themes/aurora                                 # push a theme; --r
 | [`tools/trace.py`](tools/trace.py), [`trace_report.py`](tools/trace_report.py) | Records Perfetto traces of the launcher (return to Home, cold start, D-pad) and reports where its time goes, per run and before against after. Optional: needs [`requirements-perf.txt`](tools/requirements-perf.txt). [Guide](tools/trace.md). |
 | [`tools/flamechart.py`](tools/flamechart.py) | Draws a before/after flame chart from those traces, for a pull request: one lane per thread on a shared time scale, the work a change targets in magenta with its total. Optional, like the trace tools. [Guide](tools/flamechart.md). |
 | [`tools/screendiff.py`](tools/screendiff.py) | Compares a before and an after screenshot pixel by pixel, leaving out the clock or anything you mask, and writes the pair with your Wi-Fi name blurred. Optional, like the trace tools. [Guide](tools/screendiff.md). |
-| [`tools/race_calendar.py`](tools/race_calendar.py) | Writes this season's F1 calendar into a theme for race-weekend mode, from the free Jolpica API. |
 | [`launcher/build-and-install.sh`](launcher/build-and-install.sh) | Builds a shrunk release (about 497 KB), installs it, switches Home, and rolls back if Home does not land on it. |
 
 The scripts never leave the TV without a Home app: they only disable a stock launcher they recognise,
@@ -519,7 +502,7 @@ The **TV** needs Android 8.0 (API 26) or newer: `minSdk` is a compile-time floor
 | **Configure** | Dock order, hidden apps, Live TV app, 4 to 7 tiles per row, reduced motion. All in [`config.xml`](launcher/app/src/main/res/values/config.xml) |
 | **Settings on the TV** | Hold OK on Settings for launcher settings. Optional `launcher_settings_button` makes a normal click open them directly; TV settings remain on the settings page and their app tile. |
 | **Themes** | Background, wallpaper and layout from a `config.json` pushed over Wi-Fi, no rebuild. eight ship in [`themes/`](themes/), the built-in `default/` included |
-| **25 languages** | Follows the TV's language, with a fully mirrored right-to-left layout for Hebrew |
+| **2 languages** | Follows the TV's language, with a fully mirrored right-to-left layout for Hebrew |
 | **App library** | Optional: browse every installed app and add or remove Home shortcuts. See [the app library guide](docs/app-library.md) |
 | **Tile menu** | Optional (`tile_menu`): hold OK on a tile for Move, Remove from Home and App info. Off, holding OK opens App info |
 | **Module cards** | Any TV app can offer its own tile; you approve each one once. See [`docs/modules.md`](docs/modules.md) |
