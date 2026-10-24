@@ -11,8 +11,7 @@
    the default `strings.xml`. A missing string falls back to English (`launcher/app/lint.xml`), but a new switch
    needs its strings in every locale.
 5. Moving hard-coded text into resources is welcome; do not bundle unrelated build changes with it.
-6. Build the launcher, set the TV's language (Android 13+: `tools/tv.py 'cmd locale set-app-locales com.gathin.tvhome --locales <tag>'`)
-   and attach a screenshot. Right-to-left languages mirror the layout like Hebrew; `tests/test_hebrew_resources.py`
-   checks that `layout-iw` keeps every view.
+6. Build the launcher, set the TV's language and attach a screenshot.
+   Right-to-left languages (like Arabic) mirror the layout; verify that Arabic strings and RTL layout keep every view.
 
 Then run the tests: `python3 -m unittest discover -s tests -v`.

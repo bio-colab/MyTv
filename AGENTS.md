@@ -20,7 +20,7 @@ Repository: **https://github.com/bio-colab/MyTv**
 - **Assess hardware first**: Run `python tools/assess_device.py <tv_ip>`. For Tier 1 devices (RAM <= 1GB, low storage, or budget CVTE/MStar boards), strictly apply the `ultra-lite` profile.
 - **Protect regional Arab streaming apps**: Never disable Shahid (`com.mbc.shahid`), TOD (`com.tod`), beIN, Watch IT, Starzplay, Quran apps, or IPTV apps.
 - **Protect third-party app stores on AOSP TVs**: Many budget TVs lack Google Play Store; never disable stores like Aptoide or APKPure.
-- **Disable, never uninstall**: `pm disable-user --user 0`, one package per shell call. No `pm uninstall`, no root, nothing flashed. Every step must be undone by `tools/restore.sh` / `tools/restore.ps1`.
+- **Disable, never uninstall**: `pm disable-user --user 0`, one package per shell call. No `pm uninstall`, no root, nothing flashed. Every step must be undone by `tools/restore.sh` / `tools/restore.ps1` or `tools/disable.sh`.
 - **Back up first**: Package list, disabled list, `getprop` and settings into `backup/` before the first change.
 - **Leave alone what the TV needs to work**: The TV app and input services behind HDMI and the tuner, the input/source menu, remote and Bluetooth pairing, on-screen keyboard, Play Store and Play Services.
 - **Never disable Android's core packages**: The permission controller, package installer, ext services/shared and module metadata, `com.android.systemui`, `com.android.shell`, `com.android.settings`, `android`.
@@ -42,28 +42,32 @@ The person's backups (`backup/`), screenshots (`shots/`), notes (`work/`) and th
 | `CONTRIBUTING.md` | The contributor guide for people. |
 | `SECURITY.md` | Private vulnerability reporting. |
 | `SHOWCASE.md` | Projects built on this repo that live in their own repositories. |
-| `examples/` | Tested TV model profiles: `debloat.txt`, `tv.json`. |
+| `examples/README.md` | Tested TV model profiles index; holds rows for each `debloat.txt` and `tv.json`. |
 | `launcher/` | The reference launcher: plain Java, AndroidX RecyclerView and DynamicAnimation, `minSdk` 26, no `INTERNET` permission. |
 | `themes/` | Theme folders: `config.json`, `screenshot.jpg`. Includes `themes/ultra-lite/`. |
 | `addons/` | Optional module-card apps, each its own Gradle project, never built into the launcher. |
-| `tools/` | The ADB client (`tv.py`), hardware assessor (`assess_device.py`), and helper scripts. |
+| `tools/` | The ADB client (`tv.py`), hardware assessor (`assess_device.py`), `tools/disable.sh`, and helper scripts. |
 | `tests/` | Python `unittest` suite. |
+| `.github/maintainer/MAINTAINER.md` | Procedures for repo maintainers. |
 
 ## Where a change goes
 
 | The change | Where it goes |
 |---|---|
-| A TV list, a fix, a translation, docs, a tool fix | A pull request here |
-| A small launcher switch that is off by default | A pull request here: see [`docs/workflows/launcher-switch.md`](docs/workflows/launcher-switch.md) |
-| A new look: colours, wallpaper, dock, columns | `themes/<name>/` |
-| A widget or tile that can be its own small app | `addons/<name>/` |
-| A whole new launcher or heavy rewrite | Your own repository, plus one row in `SHOWCASE.md` |
+| A TV list: debloat list, notes, `tv.json` | [`docs/workflows/tv-list.md`](docs/workflows/tv-list.md) |
+| A bug fix, doc note, or edge case | [`docs/workflows/docs-notes.md`](docs/workflows/docs-notes.md) |
+| A new launcher translation or fix | [`docs/workflows/translation.md`](docs/workflows/translation.md) |
+| A small launcher switch that is off by default | [`docs/workflows/launcher-switch.md`](docs/workflows/launcher-switch.md) |
+| A new look: colours, wallpaper, dock, columns | [`docs/workflows/theme.md`](docs/workflows/theme.md) (`themes/<name>/`) |
+| A widget or tile module card | [`docs/workflows/addon.md`](docs/workflows/addon.md) (`addons/<name>/`) |
+| Performance A/B benchmark | [`docs/workflows/perf-ab.md`](docs/workflows/perf-ab.md) |
+| A whole new launcher or heavy rewrite | [`docs/workflows/showcase.md`](docs/workflows/showcase.md) (`SHOWCASE.md`) |
 
 ## Before opening a PR
 
-- Tests: `python -m unittest discover -s tests -v`.
-- Launcher: JDK 17, Android SDK 34. In `launcher/`: `./gradlew testReleaseUnitTest lintRelease assembleRelease`.
-- APK size gate: APK must stay under 512 KB.
+- Tests: `python3 -m unittest discover -s tests -v` (under `CLEANYOURTV_STRICT`).
+- Launcher: JDK 17, Android SDK 34 (`minSdk` 26). In `launcher/`: `./gradlew --no-daemon testReleaseUnitTest lintRelease assembleRelease`.
+- APK size gate: APK must stay under 524,288 B (512 KB).
 - Screenshots: Every visual change has a screenshot from a real TV in the PR description.
 - Security: Report vulnerabilities privately per `SECURITY.md`.
 

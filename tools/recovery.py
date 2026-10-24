@@ -73,11 +73,11 @@ def record_path(list_path, host):
     tag = re.sub(r"[^A-Za-z0-9.-]", "_", host or "no-host")
     digest = hashlib.sha1(str(Path(list_path).resolve()).encode()).hexdigest()[:8]
     p_new = Path.home() / ".mytv" / f"recovery-{tag}-{digest}.json"
+    if p_new.exists():
+        return p_new
     p_old = Path.home() / ".cleanyourtv" / f"recovery-{tag}-{digest}.json"
-    if p_old.exists() and not p_new.exists():
-        return p_old
-    p_new.parent.mkdir(parents=True, exist_ok=True)
-    return p_new
+    p_old.parent.mkdir(parents=True, exist_ok=True)
+    return p_old
 
 
 def load_record(path):

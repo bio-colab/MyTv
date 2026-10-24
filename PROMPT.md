@@ -40,3 +40,13 @@
 6. تأمين الجهاز بعد الانتهاء:
    - ذكرني بإيقاف خيار تصحيح أخطاء USB من التلفاز، وافحص إغلاق المنفذ 5555 لحماية شبكتي المنزلية.
 ```
+
+## Technical Safety Rules & Edge Cases
+
+- Factory menus and test packages: Never start or enable factory packages like `com.cvte.tv.hkcfac` or `mediatek.factorymenu.ui`. Check with `dumpsys package` before touching unfamiliar system components; see `docs/TROUBLESHOOTING.md` for recovery.
+- If the stock launcher also answers the remote's app buttons, dead keys may report `KEY_UNKNOWN` or `KEY_PROGRAM`. Use `settings_key_scancodes` in only `config.xml` with the accessibility helper.
+- Key repeat helper: on a TCL G09 build (Google TV 12) ask me to hold volume up before enabling any key helper; it is all or nothing. If enabled, say which one I am giving up. See `docs/devices/tcl-55p71b-g09-key-repeat.md`. On other sets this was not measured.
+- Firmware limits: If `pm disable-user` is refused for every package, check `pm list packages -d` to confirm, and refer to `docs/TROUBLESHOOTING.md`.
+- Home guard: Query current activities with `query-activities` and confirm default home with `cmd package set-home-activity`. Check `mFocusedApp` before claiming success.
+- Screen grid and density: Check `wm density` and `display_density_forced` before configuring the grid. A skewed display is not a launcher bug; consult `docs/TROUBLESHOOTING.md`.
+- Android version check: Check `getprop ro.build.version.sdk` first. The launcher requires `minSdk 26` (Android 8.0+). On older versions, offer debloat only.

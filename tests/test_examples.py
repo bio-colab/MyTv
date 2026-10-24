@@ -69,7 +69,7 @@ class ExampleListsTest(unittest.TestCase):
             self.fail(str(e))
 
     def test_readme_table_has_one_row_per_list(self):
-        readme_rows = table_rows(ROOT / "README.md", "| TV | OS |")
+        readme_rows = table_rows(ROOT / "README.en.md", "| TV | OS |")
         example_rows = table_rows(EXAMPLES / "README.md", "| Folder |")
         self.assertEqual(len(readme_rows), len(example_rows),
                          "README.md TV table and examples/README.md have a different number of rows")

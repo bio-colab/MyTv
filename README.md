@@ -121,4 +121,6 @@ python tools/assess_device.py <عنوان_IP_التلفاز>
 2. تطوير بطاقات وإضافات جديدة تخدم المستخدم العربي.
 3. تحسين ودعم موديلات الشاشات الاقتصادية واللوحات المدمجة.
 
+راجع تعليمات وكلاء الذكاء الاصطناعي في [AGENTS.md](AGENTS.md) ودليل المساهمة في [CONTRIBUTING.md](CONTRIBUTING.md).
+
 الرابط الرسمي للمستودع: [https://github.com/bio-colab/MyTv](https://github.com/bio-colab/MyTv)

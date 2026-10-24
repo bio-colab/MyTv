@@ -134,7 +134,7 @@ Small optional apps that plug into the launcher as module cards live in [`addons
 
 ## Guides and write-ups
 
-Walkthroughs other people wrote or recorded. Press coverage is listed in [docs/PRESS.md](docs/PRESS.md).
+Walkthroughs other people wrote or recorded.
 
 - [Video tutorial, in Chinese](https://x.com/op7418/status/2112835248870592903), by [@op7418](https://x.com/op7418) on X
 - [Write-up, in Chinese](https://x.com/hfcorriez/status/2112732522937553003), by [@hfcorriez](https://x.com/hfcorriez) on X
