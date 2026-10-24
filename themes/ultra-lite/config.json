@@ -1,0 +1,14 @@
+{
+  "reduced_motion": true,
+  "focus_overshoot": false,
+  "ambient_glow": false,
+  "app_glow": false,
+  "advanced_effects": false,
+  "module_cards": false,
+  "show_stats": false,
+  "background_color": "#000000",
+  "dock_row": true,
+  "dock_even_padding": true,
+  "fill_dock": true,
+  "glass_style": "rim"
+}

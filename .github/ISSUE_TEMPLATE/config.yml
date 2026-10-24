@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Question or "does it work on my TV?"
+    url: https://github.com/bio-colab/MyTv/issues
+    about: Ask in Issues or Discussions.
+  - name: Show what you built
+    url: https://github.com/bio-colab/MyTv/discussions
+    about: Screenshots, themes, forks. Launchers and ports also go in SHOWCASE.md by pull request.
